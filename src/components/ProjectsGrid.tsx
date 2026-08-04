@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Code, Shield, Cpu, Database } from "lucide-react";
+import { ArrowRight, Code, Shield, Cpu, Database, Trophy } from "lucide-react";
 
 interface ProjectItem {
   id: string;
@@ -14,6 +14,7 @@ interface ProjectItem {
   category: "backend" | "security" | "ai" | "frontend";
   image: string;
   icon: React.ReactNode;
+  awardBadge?: string;
 }
 
 export default function ProjectsGrid() {
@@ -29,6 +30,7 @@ export default function ProjectsGrid() {
       category: "ai",
       image: "/projects/SpecSense AI/Dashboard.png",
       icon: <Cpu className="text-primary-custom" size={20} />,
+      awardBadge: "Top 3 Industry Project",
     },
     {
       id: "edgmon-v4",
@@ -58,34 +60,34 @@ export default function ProjectsGrid() {
       tags: ["Python", "Tkinter", "CLI", "Data Structures"],
       category: "backend",
       image: "/projects/Huffman Compression/Dashbord.png",
-      icon: <Code className="text-[#10B981]" size={20} />,
+      icon: <Database className="text-text-secondary" size={20} />,
     },
     {
       id: "apexbank",
       title: "ApexBank Interface",
       subtitle: "Modern Banking Client Interface",
       description: "Polished client banking application dashboard with clean ledger views, balance charts, appointment planners, and transfer configurations.",
-      tags: ["HTML5", "Vanilla CSS3", "JavaScript"],
+      tags: ["HTML5", "Vanilla CSS3", "Vanilla JS", "Glassmorphism"],
       category: "frontend",
       image: "/projects/Web Bank/dashbord.png",
-      icon: <Code className="text-[#06B6D4]" size={20} />,
+      icon: <Code className="text-[#3B82F6]" size={20} />,
     },
     {
       id: "photographer-ms",
-      title: "Photographer System",
+      title: "Photographer Portfolio",
       subtitle: "Portfolio & Booking Engine (abady)",
       description: "A robust client booking and gallery portfolio management system built on Laravel. Simplifies schedules, reserves appointments, and exposes admin logs.",
-      tags: ["PHP", "Laravel", "MySQL", "Admin Panel"],
+      tags: ["PHP", "Laravel", "MySQL", "Blade", "CSS3"],
       category: "backend",
       image: "/projects/Photogapher MS/Home page.png",
-      icon: <Database className="text-primary-custom" size={20} />,
+      icon: <Database className="text-text-secondary" size={20} />,
     },
     {
       id: "storm-breaker",
       title: "Storm-Breaker",
       subtitle: "Web Panel Security Access Tool",
       description: "Tested platform to collect device metrics, capture simulated payloads, check SSL constraints, and audit network communication parameters.",
-      tags: ["Python3", "PHP", "Bash", "Ngrok"],
+      tags: ["Python3", "PHP", "Bash", "Ngrok", "SSL"],
       category: "security",
       image: "/projects/Click Breaker/Dashboard.png",
       icon: <Shield className="text-[#EF4444]" size={20} />,
@@ -95,7 +97,7 @@ export default function ProjectsGrid() {
       title: "EdgeMon V3.1",
       subtitle: "System Metrics Telemetry Dashboard",
       description: "A lightweight hardware polling daemon collecting real-time CPU, disk, RAM and temperature bounds, logging directly into a local SQLite repository.",
-      tags: ["Flask", "SQLite", "Python", "WMI/GPUtil"],
+      tags: ["Python", "Flask", "SQLite", "psutil", "HTML5"],
       category: "security",
       image: "/projects/EdgMon V3.1/dashbord.png",
       icon: <Shield className="text-text-secondary" size={20} />,
@@ -143,6 +145,14 @@ export default function ProjectsGrid() {
           >
             {/* Image header */}
             <div className="relative h-48 w-full bg-slate-950 flex items-center justify-center overflow-hidden border-b border-border-custom">
+              {project.awardBadge && (
+                <div className="absolute top-2.5 right-2.5 z-10">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold font-mono bg-amber-500/90 text-slate-950 shadow-lg backdrop-blur-md">
+                    <Trophy size={11} className="fill-slate-950 text-slate-950" />
+                    {project.awardBadge}
+                  </span>
+                </div>
+              )}
               {project.image ? (
                 <Image
                   src={project.image}

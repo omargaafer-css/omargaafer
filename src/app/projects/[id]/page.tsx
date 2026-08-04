@@ -1,8 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Github, Globe, Check, AlertTriangle, Lightbulb, Settings, Cpu, Shield, Database, Code } from "lucide-react";
+import { ArrowLeft, Github, Globe, Check, AlertTriangle, Lightbulb, Settings, Cpu, Shield, Database, Code, Trophy, Award, ExternalLink } from "lucide-react";
 import ProjectGallery from "@/components/ProjectGallery";
+
+export interface RecognitionInfo {
+  title: string;
+  badge1: string;
+  badge2: string;
+  description: string;
+  certificateImage?: string;
+}
 
 interface ProjectDetail {
   id: string;
@@ -24,6 +32,7 @@ interface ProjectDetail {
   image?: string;
   screenshots?: string[];
   iconType: "ai" | "security" | "backend" | "frontend";
+  recognition?: RecognitionInfo;
 }
 
 const projectsData: Record<string, ProjectDetail> = {
@@ -32,10 +41,18 @@ const projectsData: Record<string, ProjectDetail> = {
     title: "SpecSense AI",
     subtitle: "Intelligent Cable Specification & Inspection Control System",
     description: "State-of-the-art computer vision & NLP system for automated datasheet analysis, cable segmentation (YOLOv8), and feeder validation calculations.",
-    overview: "SpecSense AI is a dual-tier computer vision and natural language processing system built to automate cable specification extraction, datasheet analysis, and structural cross-section inspection. It features a React & FastAPI enterprise console and a Streamlit console for single-spec parsing.",
+    overview: "SpecSense AI is a dual-tier computer vision and natural language processing system built to automate cable specification extraction, datasheet analysis, and structural cross-section inspection. Officially recognized as a Top 3 Graduation Project presented to Elsewedy Electric & SUTech, it features a React & FastAPI enterprise console and a Streamlit console for single-spec parsing.",
+    recognition: {
+      title: "Top 3 Industry Project",
+      badge1: "Top 3 Industry Project",
+      badge2: "Certified by Elsewedy Electric & SUTech",
+      description: "SpecSense AI was officially recognized as one of the Top 3 graduation projects presented to Elsewedy Electric. The project also received an official Certificate of Accomplishment from Elsewedy Electric and Elsewedy University of Technology (SUTech) for its successful completion, technical excellence, innovation, and real-world engineering impact.",
+      certificateImage: "/certifications/SpecSense AI Certificate.png"
+    },
     problem: "Electrical engineers spend substantial manual time parsing PDF sheets for cables, checking dimensions, running voltage drop calculations, and validating compliance. Manually checking inner layer boundaries of cable cross-sections is prone to measurement errors.",
     solution: "The system integrates YOLOv8 to segment outer and inner insulation boundaries from cable section photographs, automatically extracting diameters. A SpaCy-based NLP pipeline parses text extracted via OCR from PDF sheets to structure ratings (Voltage, Current, Armour). The FastAPI server operates with a dual-database fallback system.",
     features: [
+      "Top 3 Industry Awarded Graduation Project (Certified by Elsewedy Electric & SUTech)",
       "Vision Cable Inspection (YOLOv8 segmentations of circular layers)",
       "Technical Datasheet Parser (OCR text processing & SpaCy tokenizers)",
       "Intelligent Wiring & Feeder Sizer (voltage drops, sizing calculations)",
@@ -44,8 +61,10 @@ const projectsData: Record<string, ProjectDetail> = {
     architecture: "PDF Datasheet / Cable Section Image -> OCR & YOLOv8 Vision Inspector -> FastAPI Parsing Engine -> Sizing Calculations -> Postgres/SQLite DB -> React Client Frontend Dashboard",
     techStack: ["FastAPI (Python)", "React (Vite + TypeScript)", "YOLOv8", "SpaCy NLP", "PostgreSQL", "SQLite", "Tailwind CSS"],
     decisions: [
-      "Designed a custom DB Manager that tests PostgreSQL connectivity and transparently redirects operations to SQLite if unreachable, enabling local development without Docker.",
-      "Implemented PowerShell commands inside run_project.bat to automatically locate and terminate dangling node/python servers on ports 8000 and 5173."
+      "Custom Resilient Dual-Database Engine (PostgreSQL & SQLite): Built a transparent DB fallback driver that dynamically pings PostgreSQL availability and routes queries to local SQLite without developer intervention or Docker runtime prerequisites.",
+      "Decoupled Vision & NLP Inference Execution Threads: Isolated heavy YOLOv8 segmentation loops and SpaCy NLP parsing onto async worker processes, preventing high-latency CPU tensor computations from blocking main FastAPI REST endpoints.",
+      "Contrast-Augmented Dataset Pipeline for Cable Cross-Sections: Engineered custom data augmentation pipelines with adaptive contrast and brightness adjustments to ensure high-precision segmentation of inner insulation boundaries across varied industrial lighting.",
+      "Zero-Downtime Automated Process Lifecycle Management: Developed PowerShell process kill hooks inside run_project.bat to automatically detect, liberate, and clean up dangling Node/Python server locks on ports 8000 and 5173 during rapid deployment iterations."
     ],
     challenges: "YOLOv8 model required robust segmentations on varying cable backgrounds and custom cable colors. This was solved by expanding the training dataset with contrast-adjusted augments and annotating inner insulations precisely.",
     lessons: "Leading a multi-disciplinary project highlights the value of defining clean schemas and REST API borders early. Separating the model inference loops from the main web server threads keeps the interface responsive.",
@@ -434,6 +453,61 @@ export default async function ProjectPage({ params }: PageProps) {
             )}
           </div>
         </div>
+
+        {/* Industry Recognition Card */}
+        {project.recognition && (
+          <div className="relative overflow-hidden bg-gradient-to-r from-amber-950/40 via-[#0E1322]/85 to-yellow-950/30 border border-amber-500/40 rounded-2xl p-6 sm:p-8 mb-8 shadow-[0_0_30px_rgba(245,158,11,0.15)] group transition-all duration-300">
+            {/* Ambient Background Glow Accent */}
+            <div className="absolute -top-24 -right-24 w-60 h-60 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+              <div className="flex-1">
+                {/* Header with Trophy Icon */}
+                <div className="flex items-center gap-2.5 mb-3">
+                  <div className="p-2 bg-amber-500/20 border border-amber-500/40 rounded-xl text-amber-400 shadow-inner shrink-0">
+                    <Trophy size={22} className="text-amber-400" />
+                  </div>
+                  <h2 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
+                    Industry Recognition
+                  </h2>
+                </div>
+
+                {/* Badges */}
+                <div className="flex flex-wrap gap-2.5 mb-4">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold font-mono bg-amber-500/20 text-amber-300 border border-amber-500/40 shadow-sm">
+                    <Trophy size={13} className="text-amber-400" />
+                    {project.recognition.badge1}
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold font-mono bg-amber-500/15 text-amber-200 border border-amber-500/30 shadow-sm">
+                    <Award size={13} className="text-amber-400" />
+                    {project.recognition.badge2}
+                  </span>
+                </div>
+
+                {/* Content */}
+                <p className="text-sm text-text-secondary leading-relaxed font-normal">
+                  {project.recognition.description}
+                </p>
+              </div>
+
+              {/* Certificate Action Button */}
+              {project.recognition.certificateImage && (
+                <div className="shrink-0 w-full md:w-auto">
+                  <a
+                    href={project.recognition.certificateImage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2.5 w-full md:w-auto px-5 py-3 rounded-xl font-bold text-xs font-mono uppercase tracking-wider text-amber-100 bg-amber-500/20 hover:bg-amber-500/30 border border-amber-500/50 hover:border-amber-400 transition-all duration-300 shadow-md group/btn"
+                  >
+                    <Award size={16} className="text-amber-400 group-hover/btn:scale-110 transition-transform" />
+                    <span>View Certificate</span>
+                    <ExternalLink size={14} className="opacity-70 group-hover/btn:opacity-100" />
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Project Image Gallery */}
         <ProjectGallery

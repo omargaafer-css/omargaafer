@@ -17,6 +17,12 @@ export default function CertificationsGrid() {
 
   const certifications: Certification[] = [
     {
+      title: "SpecSense AI",
+      issuer: "Elsewedy Electric & SUTECH",
+      date: "2025",
+      image: "/certifications/SpecSense AI Certificate.png",
+    },
+    {
       title: "Summer Internship 2025",
       issuer: "Elsewedy Electric PSP",
       date: "2025",
@@ -55,7 +61,7 @@ export default function CertificationsGrid() {
 
   return (
     <div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
         {certifications.map((cert) => (
           <div
             key={cert.title}
