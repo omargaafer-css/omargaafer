@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "huffman-compressor",
     "apexbank",
     "photographer-ms",
-    "storm-breaker",
+    "click-breaker",
     "edgmon-v3-1",
   ];
 

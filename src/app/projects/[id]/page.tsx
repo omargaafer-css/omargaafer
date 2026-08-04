@@ -275,12 +275,12 @@ const projectsData: Record<string, ProjectDetail> = {
     ],
     iconType: "backend"
   },
-  "storm-breaker": {
-    id: "storm-breaker",
-    title: "Storm-Breaker",
+  "click-breaker": {
+    id: "click-breaker",
+    title: "Click Breaker",
     subtitle: "Web Panel Security Access Tool",
     description: "Tested platform to collect device metrics, capture simulated payloads, check SSL constraints, and audit network communication parameters.",
-    overview: "Storm-Breaker is a security testing panel built to audit device telemetry and web authorization permissions under controlled lab configurations.",
+    overview: "Click Breaker is a security testing panel built to audit device telemetry and web authorization permissions under controlled lab configurations.",
     problem: "Security analysts need to verify how easily user agents expose device parameters (such as locations, camera, or microphone metrics) when security defaults are weak.",
     solution: "The tool provides a web panel built with Python and PHP. It handles device metadata extraction and simulates camera/microphone interactions. It includes local tunnel integration via Ngrok.",
     features: [

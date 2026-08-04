@@ -83,8 +83,8 @@ export default function ProjectsGrid() {
       icon: <Database className="text-text-secondary" size={20} />,
     },
     {
-      id: "storm-breaker",
-      title: "Storm-Breaker",
+      id: "click-breaker",
+      title: "Click Breaker",
       subtitle: "Web Panel Security Access Tool",
       description: "Tested platform to collect device metrics, capture simulated payloads, check SSL constraints, and audit network communication parameters.",
       tags: ["Python3", "PHP", "Bash", "Ngrok", "SSL"],
