@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Github, Globe, Check, AlertTriangle, Lightbulb, Settings, Cpu, Shield, Database, Code, Trophy, Award, ExternalLink } from "lucide-react";
+import { ArrowLeft, Github, Globe, Download, Check, AlertTriangle, Lightbulb, Settings, Cpu, Shield, Database, Code, Trophy, Award, ExternalLink } from "lucide-react";
 import ProjectGallery from "@/components/ProjectGallery";
 
 export interface RecognitionInfo {
@@ -29,6 +29,7 @@ interface ProjectDetail {
   future: string[];
   github: string;
   demo?: string;
+  downloadUrl?: string;
   image?: string;
   screenshots?: string[];
   iconType: "ai" | "security" | "backend" | "frontend";
@@ -116,6 +117,7 @@ const projectsData: Record<string, ProjectDetail> = {
       "Support PDF and Excel analytical inventory reports export"
     ],
     github: "https://github.com/omar230101276/FoodVerse",
+    downloadUrl: "/downloads/FoodVerse.jar",
     image: "/projects/FoodVerse/order.png",
     screenshots: [
       "/projects/FoodVerse/order.png",
@@ -483,6 +485,16 @@ export default async function ProjectPage({ params }: PageProps) {
               <Github size={14} />
               <span>SOURCE CODE</span>
             </a>
+            {project.downloadUrl && (
+              <a
+                href={project.downloadUrl}
+                download
+                className="inline-flex items-center gap-2 px-4 py-2 border border-emerald-500/40 rounded-lg text-xs font-bold text-emerald-300 bg-emerald-950/30 hover:bg-emerald-900/50 transition-colors shadow-md"
+              >
+                <Download size={14} className="text-emerald-400" />
+                <span>DOWNLOAD RUNNABLE (.JAR)</span>
+              </a>
+            )}
             {project.demo && (
               <a
                 href={project.demo}
