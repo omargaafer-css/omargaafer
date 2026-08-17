@@ -84,6 +84,49 @@ const projectsData: Record<string, ProjectDetail> = {
     ],
     iconType: "ai"
   },
+  "foodverse": {
+    id: "foodverse",
+    title: "FoodVerse",
+    subtitle: "Enterprise Multi-Role Food Delivery & ERP Platform",
+    description: "A 4-tier desktop Food Delivery & Resource Management (ERP) platform featuring fine-grained RBAC, atomic SQLite inventory persistence, receipt generation, and live order status management.",
+    overview: "FoodVerse is a desktop food delivery and enterprise resource planning (ERP) system engineered in Java 21 with Swing GUI and an embedded SQLite database (talabat.db). Built with pure 4-tier architecture, it provides dedicated role-based access portals for Customers, Restaurant Managers, Kitchen Staff, Delivery Drivers, and Super Admins.",
+    problem: "Legacy food delivery software and desktop ordering systems frequently rely on unstructured text files or un-synchronized modules, leading to race conditions during simultaneous inventory deductions, zero multi-branch isolation for store managers, and lack of transaction safety.",
+    solution: "FoodVerse implements a relational SQLite database architecture (users, restaurants, products, orders, order_items) using PreparedStatements and WAL mode (PRAGMA journal_mode = WAL;). It enforces strict Role-Based Access Control (RBAC), automatic real-time stock deduction with cart validation, receipt printing, and custom Graphics2D analytics bar charts.",
+    features: [
+      "4-Tier Role-Based Access Control (Customer, Restaurant Manager, Kitchen Staff, Delivery Driver, Super Admin)",
+      "Real-Time Stock Deduction & Cart Persistence (Validates availability to prevent over-ordering)",
+      "Relational SQLite Database Architecture (talabat.db with PreparedStatements & WAL Mode)",
+      "Scoped Multi-Branch Management (Managers isolated strictly to assigned restaurant entities e.g., KFC, Al Sultan Grill, Pizza Hut)",
+      "Modern Dark Swing UI & Graphics2D Charts (Vibrant Talabat Orange #FF5A00 design system and bar chart graphics)",
+      "Printable Receipts & Live Order Status Tracking (Placed -> Preparing -> On the Way -> Delivered)"
+    ],
+    architecture: "Desktop Swing GUI (Multi-Role Portals) -> Service Layer (OrderService, MenuService, UserService) -> DAO Layer (UserDao, RestaurantDao, ProductDao, OrderDao) -> Embedded SQLite Database (talabat.db)",
+    techStack: ["Java 21", "Java Swing GUI", "SQLite JDBC", "DAO Pattern", "Graphics2D", "RBAC Security"],
+    decisions: [
+      "Replaced legacy text file persistence with normalized SQL tables and WAL mode (PRAGMA journal_mode = WAL;) for concurrent read/write throughput and resource safety.",
+      "Decoupled Presentation (Swing GUI) from Data Access via strict DAO and Service layers, ensuring clean enterprise modularity.",
+      "Implemented scoped role-based access control so restaurant managers can only inspect and edit menus/inventory belonging strictly to their assigned restaurant ID.",
+      "Engineered real-time stock deduction verification during cart population and checkout to eliminate inventory depletion edge cases."
+    ],
+    challenges: "Preventing UI freeze frames and thread contention during SQLite database transactions while updating live Swing Graphics2D components and rendering custom order Receipts.",
+    lessons: "Applying strict DAO abstractions with parameterized PreparedStatements and SQLite WAL mode in Java desktop applications provides fast, resilient transactional performance while keeping user interfaces smooth.",
+    future: [
+      "Integrate asynchronous WebSocket notification server for instantaneous order dispatch alerts",
+      "Add Stripe/PayPal API payment gateway integration",
+      "Support PDF and Excel analytical inventory reports export"
+    ],
+    github: "https://github.com/omar230101276/FoodVerse",
+    image: "/projects/FoodVerse/order.png",
+    screenshots: [
+      "/projects/FoodVerse/order.png",
+      "/projects/FoodVerse/inventory management.png",
+      "/projects/FoodVerse/admin hub.png",
+      "/projects/FoodVerse/view order.png",
+      "/projects/FoodVerse/registration management.png",
+      "/projects/FoodVerse/login page.png"
+    ],
+    iconType: "backend"
+  },
   "edgmon-v4": {
     id: "edgmon-v4",
     title: "EdgeMon V4.0",

@@ -1,111 +1,139 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/ultrasecurity/Storm-Breaker"><img src=".imgs/1demo.png" alt="StormBreaker"></a>
-
+  <a href="#"><img src=".imgs/clickbreaker_preview.jpg" alt="Click Breaker Platform"></a>
+  <br>
+  Click Breaker
+  <br>
 </h1>
 
-<h4 align="center">A Tool With Attractive Capabilities. </h4>
+<h4 align="center">Next-Generation Telemetry & Cyber Security Operations Platform (v2.0)</h4>
 
 <p align="center">
-
-  <a href="http://python.org">
-    <img src="https://img.shields.io/badge/python-v3-blue">
+  <a href="https://python.org">
+    <img src="https://img.shields.io/badge/Python-v3.8+-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
   </a>
   <a href="https://php.net">
-    <img src="https://img.shields.io/badge/php-7.4.4-green"
-         alt="php">
+    <img src="https://img.shields.io/badge/PHP-v7.4%20%7C%20v8.x-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP">
   </a>
-
-  <a href="https://en.wikipedia.org/wiki/Linux">
-    <img src="https://img.shields.io/badge/Platform-Linux-red">
+  <a href="#">
+    <img src="https://img.shields.io/badge/Platform-Cross--Platform-00599C?style=flat-square" alt="Platform">
   </a>
-
+  <a href="#">
+    <img src="https://img.shields.io/badge/Version-2.0.0-06B6D4?style=flat-square" alt="Version">
+  </a>
 </p>
 
-![demo](.imgs/screen1.jpeg)
+---
 
-### Features:
+## Overview
 
-- Obtain Device Information Without Any Permission !
-- Access Location [SMARTPHONES]
-- Access Webcam
-- Access Microphone
+**Click Breaker v2.0** is an advanced security telemetry, audit, and real-time monitoring operations platform.
 
-<br>
+Built with a high-performance Python control core and a glassmorphism web panel, Click Breaker provides live event streaming, interactive Chart.js analytics, dynamic plugin payload engines, HMAC-SHA256 JWT security, and multi-channel webhook dispatching (Telegram, Discord, Slack).
 
-### Update Log:
+---
 
-- Second (latest) Update on November 4th , 2022 .
-- The overall structure of the tool is programmed from the beginning and is available as a web panel (in previous versions, the tool was available in the command line).
-- Previous version's bugs fixed !
-- Auto-download Ngrok Added !
-- The templates have been optimized !
-- Logs can be downloaded (NEW) !
-- Clear log Added !
-- It can be uploaded on a personal host (you won't have the Ngork problems anymore)
-- You can start and stop the listener anytime ! (At will)
-- Beautified user interface (NEW) !
+## Key Features
 
-> We have deleted Ngrok in the new version of Storm breaker and entrusted the user with running and sharing the localhost . So please note that Storm breaker runs a localhost for you and you have to start the Ngrok on your intended port yourself .
-> <br>
+- ⚡ **Real-Time Telemetry Listener**: Live streaming terminal log viewer with pause/resume state control.
+- 📊 **Interactive Analytics Dashboard**: Real-time Chart.js donut and line chart visualizations for capture rates and module breakdowns.
+- 🔔 **Multi-Channel Webhook Engine**: Instant notification alerts sent to **Discord**, **Telegram**, and **Slack** upon telemetry capture.
+- 🔐 **HMAC-SHA256 JWT Security**: Signed API tokens and bearer token authorization for secure programmatic control.
+- 🔌 **Dynamic Plugin Payload Engine**: Modular payload engine supporting custom modules dropped directly into `click-web/plugins/`.
+- 🎨 **Modern Glassmorphic Control Panel**: Sleek dark-mode interface with responsive layout and Outfit Google typography.
+- 🌐 **Tunnel Ready**: Built-in support for local dev server deployment and Cloudflare Tunnel (`cloudflared`) / Ngrok forwarding.
 
-#### Attention! :
+---
 
-> This version can be run on both local host and your personal domain and host . However , you can use it for both situations. If your country has suspended the Ngrok service, or your country's banned Ngrok, or your victim can't open the Ngrok link (for the reasons such as : He sees such a link as suspicious, Or if this service is suspended in his country) We suggest using the tool on your personal host and domain .
-> <br>
-
-## Default username and password:
-
-- `username` : `admin`
-- `password` : `admin`
-- You can edit the config.php file to change the username and password .
-  <br>
-
-### Dependencies
-
-**`Storm Breaker`** requires following programs to run properly -
-
-- `php`
-- `python3`
-- `git`
-- `Ngrok`
-
-<!-- ![demo](.imgs/Work3.gif) -->
-<br>
-
-### Platforms Tested
-
-- Kali Linux 2022
-- macOS Big Sur / M1
-- Termux (android)
-- Personal host (direct admin and cPanel)
-  <br>
-
-### Installation On Kali Linux
+## Project Architecture
 
 ```
-git clone https://github.com/ultrasecurity/Storm-Breaker
-cd Storm-Breaker
-sudo bash install.sh
-sudo python3 -m pip install -r requirements.txt
-sudo python3 st.py
+Click Breaker Root
+├── cb.py                 # Primary Python Controller & Server Manager
+├── install.sh            # Automated System Dependencies Installer
+├── .ascii                # CLI Branding & ASCII Banner
+├── requirements.txt      # Python Dependencies Manifest
+├── Settings.json         # Tool State & PID Configuration
+├── modules/              # Core Control Modules
+│   ├── banner.py         # Terminal Header & Visual Output Engine
+│   ├── check.py          # Dependency Checker & Environment Initializer
+│   └── control.py        # PHP Process Lifecycle & Log File Handler
+└── click-web/            # Web Control Panel & Telemetry Endpoints
+    ├── config.php        # Administrator Credentials & Webhook Settings
+    ├── index.php         # Router & Session Dispatcher
+    ├── login.php         # Glassmorphism Authentication Portal
+    ├── panel.php         # Live Telemetry & Analytics Control Center
+    ├── analytics_api.php # JSON Telemetry Metrics API
+    ├── webhooks.php       # Telegram, Discord & Slack Dispatcher
+    ├── receiver.php      # Async Telemetry Payload Receiver
+    ├── list_templates.php# Dynamic Module & Plugin Scanner API
+    ├── plugins/          # Custom Payload Plugins Directory
+    ├── templates/        # Built-in Telemetry Modules
+    └── assets/           # CSS, JS (script.js), Fonts, Components
 ```
 
-<br>
+---
 
-**`how to run personal host 👇`**
+## Quick Start
 
-> Zip the contents of the storm-web folder completely and upload it to the public_html path .
+### 1. Installation
 
-> Note that the tool should not be opened in a path like this > yourdomain.com/st-web
-> Instead , it should be opened purely in the public_html path (i.e. : don't just zip the storm-web folder itself, but manually zip its contents (the index.php file and other belongings should be in the public_html path)
+Clone the repository and install required packages:
 
-#### Attention!:
+```bash
+# Install Python requirements
+python3 -m pip install -r requirements.txt
+```
 
-> Note that to use this tool on your Localhost , You also need SSL . Because many of the tool's capabilities require SSL .
+On Linux or macOS, run the dependency setup script:
 
-#### Attention!:
+```bash
+bash install.sh
+```
 
-> To run ngrok on termux you need to enable your personal hotspot and cellular network.
+### 2. Launching Click Breaker
 
+Execute the primary entry point:
+
+```bash
+python3 cb.py
+```
+
+The controller will start the local server on `http://localhost:2525`.
+
+---
+
+## Webhook Configuration
+
+To enable instant alerts for captured telemetry, update `click-web/config.php`:
+
+```php
+$CONFIG['webhooks'] = [
+    "discord" => [
+        "enabled" => true,
+        "webhook_url" => "https://discord.com/api/webhooks/YOUR/WEBHOOK/URL"
+    ],
+    "telegram" => [
+        "enabled" => true,
+        "bot_token" => "YOUR_TELEGRAM_BOT_TOKEN",
+        "chat_id" => "YOUR_TELEGRAM_CHAT_ID"
+    ],
+    "slack" => [
+        "enabled" => true,
+        "webhook_url" => "https://hooks.slack.com/services/YOUR/SLACK/URL"
+    ]
+];
+```
+
+---
+
+## Default Credentials
+
+- **Username**: `admin`
+- **Password**: `admin`
+
+---
+
+<p align="center">
+  <b>Click Breaker Project &bull; Security Telemetry Platform v2.0</b>
 </p>

@@ -33,6 +33,16 @@ export default function ProjectsGrid() {
       awardBadge: "Top 3 Industry Project",
     },
     {
+      id: "foodverse",
+      title: "FoodVerse",
+      subtitle: "Multi-Role Food Delivery & ERP Platform",
+      description: "A 4-tier desktop Food Delivery & ERP system built with Java 21, Swing GUI, and an embedded SQLite database (talabat.db). Features RBAC security, real-time inventory deduction, and receipt generation.",
+      tags: ["Java 21", "Swing GUI", "SQLite", "RBAC", "Data Structures"],
+      category: "backend",
+      image: "/projects/FoodVerse/order.png",
+      icon: <Database className="text-[#FF5A00]" size={20} />,
+    },
+    {
       id: "edgmon-v4",
       title: "EdgeMon V4.0",
       subtitle: "Intelligent Threat & System Monitor",
