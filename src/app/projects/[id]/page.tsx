@@ -74,8 +74,9 @@ const projectsData: Record<string, ProjectDetail> = {
       "Build real-time streaming calculation graphs"
     ],
     github: "https://github.com/omar230101276/SpecSense-AI",
-    image: "/projects/SpecSense AI/Dashboard.png",
+    image: "/projects/SpecSense AI/specsense_ai_preview.jpg",
     screenshots: [
+      "/projects/SpecSense AI/specsense_ai_preview.jpg",
       "/projects/SpecSense AI/Dashboard.png",
       "/projects/SpecSense AI/Vision Inspection.png",
       "/projects/SpecSense AI/ocr.png",
@@ -116,8 +117,9 @@ const projectsData: Record<string, ProjectDetail> = {
       "Support PDF and Excel analytical inventory reports export"
     ],
     github: "https://github.com/omar230101276/FoodVerse",
-    image: "/projects/FoodVerse/order.png",
+    image: "/projects/FoodVerse/foodverse_preview.jpg",
     screenshots: [
+      "/projects/FoodVerse/foodverse_preview.jpg",
       "/projects/FoodVerse/order.png",
       "/projects/FoodVerse/inventory management.png",
       "/projects/FoodVerse/admin hub.png",
@@ -156,8 +158,9 @@ const projectsData: Record<string, ProjectDetail> = {
       "Integrate automated firewall rule blocks for identified malicious IP inputs"
     ],
     github: "https://github.com/omar230101276/EdgMon_V4.0",
-    image: "/projects/EdgMon V4.0/dashbord.png",
+    image: "/projects/EdgMon V4.0/edgmon_v4_preview.jpg",
     screenshots: [
+      "/projects/EdgMon V4.0/edgmon_v4_preview.jpg",
       "/projects/EdgMon V4.0/dashbord.png",
       "/projects/EdgMon V4.0/cpu.png",
       "/projects/EdgMon V4.0/disk.png",
@@ -197,8 +200,9 @@ const projectsData: Record<string, ProjectDetail> = {
       "Implement PostgreSQL data layer for permanent order records"
     ],
     github: "https://github.com/omar230101276/e-commerce-microservices",
-    image: "/projects/E-Commerce App/dashboard.png",
+    image: "/projects/E-Commerce App/ecommerce_preview.jpg",
     screenshots: [
+      "/projects/E-Commerce App/ecommerce_preview.jpg",
       "/projects/E-Commerce App/dashboard.png",
       "/projects/E-Commerce App/cluster status.png",
       "/projects/E-Commerce App/orders.png",
@@ -234,8 +238,9 @@ const projectsData: Record<string, ProjectDetail> = {
       "Add folder-level archive zipping support"
     ],
     github: "https://github.com/omar230101276/Huffman_Compressor",
-    image: "/projects/Huffman Compression/Dashbord.png",
+    image: "/projects/Huffman Compression/huffman_preview.jpg",
     screenshots: [
+      "/projects/Huffman Compression/huffman_preview.jpg",
       "/projects/Huffman Compression/Dashbord.png"
     ],
     iconType: "backend"
@@ -390,8 +395,9 @@ const projectsData: Record<string, ProjectDetail> = {
       "Support customized telemetry polling dashboards"
     ],
     github: "https://github.com/omar230101276/Automated_Server_Monitorin-Linux-Windows-",
-    image: "/projects/EdgMon V3.1/dashbord.png",
+    image: "/projects/EdgMon V3.1/edgmon_v3_1_preview.jpg",
     screenshots: [
+      "/projects/EdgMon V3.1/edgmon_v3_1_preview.jpg",
       "/projects/EdgMon V3.1/dashbord.png",
       "/projects/EdgMon V3.1/alerts.png",
       "/projects/EdgMon V3.1/metrics.png",
@@ -427,8 +433,9 @@ const projectsData: Record<string, ProjectDetail> = {
       "Integrate redundant gateway paths with HSRP or VRRP protocols"
     ],
     github: "https://github.com/omar230101276/Enterprise-Network",
-    image: "/projects/Enterprise Network/Design.png",
+    image: "/projects/Enterprise Network/enterprise_network_preview.jpg",
     screenshots: [
+      "/projects/Enterprise Network/enterprise_network_preview.jpg",
       "/projects/Enterprise Network/Design.png"
     ],
     iconType: "security"

@@ -28,7 +28,7 @@ export default function ProjectsGrid() {
       description: "State-of-the-art computer vision & NLP system for automated datasheet analysis, cable segmentation (YOLOv8), and feeder validation calculations.",
       tags: ["FastAPI", "React", "YOLOv8", "PostgreSQL", "SpaCy"],
       category: "ai",
-      image: "/projects/SpecSense AI/Dashboard.png",
+      image: "/projects/SpecSense AI/specsense_ai_preview.jpg",
       icon: <Cpu className="text-primary-custom" size={20} />,
       awardBadge: "Top 3 Industry Project",
     },
@@ -39,7 +39,7 @@ export default function ProjectsGrid() {
       description: "A 4-tier desktop Food Delivery & ERP system built with Java 21, Swing GUI, and an embedded SQLite database (talabat.db). Features RBAC security, real-time inventory deduction, and receipt generation.",
       tags: ["Java 21", "Swing GUI", "SQLite", "RBAC", "Data Structures"],
       category: "backend",
-      image: "/projects/FoodVerse/order.png",
+      image: "/projects/FoodVerse/foodverse_preview.jpg",
       icon: <Database className="text-[#FF5A00]" size={20} />,
     },
     {
@@ -49,7 +49,7 @@ export default function ProjectsGrid() {
       description: "A hybrid system monitoring and Layer 2/4 intrusion detection system (IDS) utilizing Machine Learning (Scikit-Learn) and raw Scapy packet analysis.",
       tags: ["Flask", "Scikit-Learn", "Scapy", "SQLite", "openpyxl"],
       category: "security",
-      image: "/projects/EdgMon V4.0/dashbord.png",
+      image: "/projects/EdgMon V4.0/edgmon_v4_preview.jpg",
       icon: <Shield className="text-[#EF4444]" size={20} />,
     },
     {
@@ -59,7 +59,7 @@ export default function ProjectsGrid() {
       description: "A containerized shopping API framework separating catalog, cart, order and payment into autonomous FastAPI servers prepared for Kubernetes orchestration.",
       tags: ["FastAPI", "React", "Docker", "Kubernetes", "Microservices"],
       category: "backend",
-      image: "/projects/E-Commerce App/dashboard.png",
+      image: "/projects/E-Commerce App/ecommerce_preview.jpg",
       icon: <Database className="text-[#F59E0B]" size={20} />,
     },
     {
@@ -69,7 +69,7 @@ export default function ProjectsGrid() {
       description: "A desktop and terminal compiler deploying the Huffman prefix algorithm. Integrates Shannon Entropy verification limits for files.",
       tags: ["Python", "Tkinter", "CLI", "Data Structures"],
       category: "backend",
-      image: "/projects/Huffman Compression/Dashbord.png",
+      image: "/projects/Huffman Compression/huffman_preview.jpg",
       icon: <Database className="text-text-secondary" size={20} />,
     },
     {
@@ -109,7 +109,7 @@ export default function ProjectsGrid() {
       description: "A lightweight hardware polling daemon collecting real-time CPU, disk, RAM and temperature bounds, logging directly into a local SQLite repository.",
       tags: ["Python", "Flask", "SQLite", "psutil", "HTML5"],
       category: "security",
-      image: "/projects/EdgMon V3.1/dashbord.png",
+      image: "/projects/EdgMon V3.1/edgmon_v3_1_preview.jpg",
       icon: <Shield className="text-text-secondary" size={20} />,
     },
     {
@@ -119,7 +119,7 @@ export default function ProjectsGrid() {
       description: "A simulated enterprise-scale network utilizing dynamic OSPF routing, subnet partitions (VLSM), and multi-VLAN segmentation across switches and routers.",
       tags: ["Cisco Packet Tracer", "OSPF Routing", "VLSM Subnetting", "VLANs & SVIs", "Python"],
       category: "security",
-      image: "/projects/Enterprise Network/Design.png",
+      image: "/projects/Enterprise Network/enterprise_network_preview.jpg",
       icon: <Shield className="text-[#EF4444]" size={20} />,
     },
   ];

@@ -67,6 +67,20 @@ const getCaption = (path: string, projectTitle: string): string => {
       return `${projectTitle} - Photographer Profile Configuration Panel`;
     case "clickbreaker_preview":
       return `${projectTitle} - Operations Platform v2.0 Overview`;
+    case "specsense_ai_preview":
+      return `${projectTitle} - System Architecture & Inspection Console Overview`;
+    case "foodverse_preview":
+      return `${projectTitle} - 4-Tier Enterprise ERP & Delivery Platform Overview`;
+    case "edgmon_v4_preview":
+      return `${projectTitle} - ML Intrusion Detection & Telemetry Console Overview`;
+    case "ecommerce_preview":
+      return `${projectTitle} - Docker Microservices & Kubernetes Pods Overview`;
+    case "huffman_preview":
+      return `${projectTitle} - Lossless Coding & Shannon Entropy Console Overview`;
+    case "edgmon_v3_1_preview":
+      return `${projectTitle} - Hardware Polling & Telemetry Ledger Overview`;
+    case "enterprise_network_preview":
+      return `${projectTitle} - Multi-VLAN Topology & OSPF Core Overview`;
     case "banner":
       return `${projectTitle} - CLI Controller & Launch Engine`;
     case "login":
