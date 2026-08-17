@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import SkillsList from "@/components/SkillsList";
 
 import ProjectsGrid from "@/components/ProjectsGrid";
+import SystemArch from "@/components/SystemArch";
 import Experience from "@/components/Experience";
 import ContactForm from "@/components/ContactForm";
 import CertificationsGrid from "@/components/CertificationsGrid";
@@ -109,6 +110,10 @@ export default function Home() {
           </p>
         </div>
         <ProjectsGrid />
+
+        <div className="mt-16">
+          <SystemArch />
+        </div>
       </section>
 
       {/* Experience Section */}
