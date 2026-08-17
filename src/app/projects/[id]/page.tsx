@@ -78,7 +78,7 @@ const projectsData: Record<string, ProjectDetail> = {
     screenshots: [
       "/projects/SpecSense AI/Dashboard.png",
       "/projects/SpecSense AI/Vision Inspection.png",
-      "/projects/SpecSense AI/ocr .png",
+      "/projects/SpecSense AI/ocr.png",
       "/projects/SpecSense AI/tech assistant.png",
       "/projects/SpecSense AI/assistant result.png"
     ],

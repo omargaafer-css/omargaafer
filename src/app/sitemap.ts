@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "photographer-ms",
     "click-breaker",
     "edgmon-v3-1",
+    "enterprise-network",
   ];
 
   const projectUrls = projects.map((id) => ({
