@@ -101,7 +101,6 @@ export default function ProjectsGrid() {
       category: "security",
       image: "/projects/Click Breaker/clickbreaker_preview.jpg",
       icon: <Shield className="text-[#EF4444]" size={20} />,
-      awardBadge: "Security Ops Platform v2.0",
     },
     {
       id: "edgmon-v3-1",

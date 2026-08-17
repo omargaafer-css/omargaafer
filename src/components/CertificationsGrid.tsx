@@ -19,7 +19,7 @@ export default function CertificationsGrid() {
     {
       title: "SpecSense AI",
       issuer: "Elsewedy Electric & SUTECH",
-      date: "2025",
+      date: "2026",
       image: "/certifications/SpecSense AI Certificate.png",
     },
     {
