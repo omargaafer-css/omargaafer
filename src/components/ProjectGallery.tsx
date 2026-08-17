@@ -65,6 +65,14 @@ const getCaption = (path: string, projectTitle: string): string => {
       return `${projectTitle} - Booking Approvals & Calendar Management`;
     case "profile settings":
       return `${projectTitle} - Photographer Profile Configuration Panel`;
+    case "clickbreaker_preview":
+      return `${projectTitle} - Operations Platform v2.0 Overview`;
+    case "banner":
+      return `${projectTitle} - CLI Controller & Launch Engine`;
+    case "login":
+      return `${projectTitle} - Glassmorphism Authentication Portal`;
+    case "modules":
+      return `${projectTitle} - Dynamic Plugin Payload Directory`;
     default:
       // Format file name capitalization nicely as default
       return `${projectTitle} - ${fileNameWithExt

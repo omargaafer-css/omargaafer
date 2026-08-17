@@ -320,35 +320,44 @@ const projectsData: Record<string, ProjectDetail> = {
   },
   "click-breaker": {
     id: "click-breaker",
-    title: "Click Breaker",
-    subtitle: "Web Panel Security Access Tool",
-    description: "Tested platform to collect device metrics, capture simulated payloads, check SSL constraints, and audit network communication parameters.",
-    overview: "Click Breaker is a security testing panel built to audit device telemetry and web authorization permissions under controlled lab configurations.",
-    problem: "Security analysts need to verify how easily user agents expose device parameters (such as locations, camera, or microphone metrics) when security defaults are weak.",
-    solution: "The tool provides a web panel built with Python and PHP. It handles device metadata extraction and simulates camera/microphone interactions. It includes local tunnel integration via Ngrok.",
+    title: "Click Breaker v2.0",
+    subtitle: "Next-Gen Telemetry & Cyber Security Operations Platform",
+    description: "Advanced security telemetry, live audit operations, and real-time monitoring platform featuring a high-performance Python control core, glassmorphism web panel, HMAC-SHA256 JWT security, and multi-channel webhook dispatching (Telegram, Discord, Slack).",
+    overview: "Click Breaker v2.0 is an enterprise-grade cyber security operations platform built with a Python 3 control core (cb.py) and a modern glassmorphism PHP web panel. It features real-time telemetry streaming, interactive Chart.js analytics, dynamic plugin engines, HMAC-SHA256 signed tokens, and instant webhook dispatches to Discord, Telegram, and Slack.",
+    problem: "Security operational teams and penetration testers need real-time telemetry streaming and payload auditing without complex SIEM infrastructure, fragmented log files, or unauthenticated control endpoints.",
+    solution: "Click Breaker provides an integrated control framework (cb.py) managing an embedded PHP server. It features async telemetry receivers, HMAC-SHA256 JWT security, dynamic plugin scanners (click-web/plugins/), interactive Chart.js donut/line analytics, and multi-channel webhook alerts (Telegram, Discord, Slack).",
     features: [
-      "Device Telemetry extraction (permission-free hardware properties)",
-      "Webcam/Microphone authorization audits",
-      "Local Ngrok tunnel script integration",
-      "Operational logging panels"
+      "Real-Time Telemetry Listener (live streaming terminal log viewer with state control)",
+      "Interactive Chart.js Analytics Dashboard (capture rates & module breakdown visualizer)",
+      "Multi-Channel Webhook Dispatcher (instant alerts to Discord, Telegram, and Slack)",
+      "HMAC-SHA256 JWT Security (signed API tokens & bearer authorization for API routes)",
+      "Dynamic Plugin Engine (modular payload engine loading plugins from click-web/plugins/)",
+      "Glassmorphism Control Panel (modern dark-mode design system with Outfit typography)",
+      "Tunnel Integration (Cloudflare Tunnel cloudflared & Ngrok support for remote ops)"
     ],
-    architecture: "Audited Web Page -> PHP Web Endpoint -> Local Python Listeners -> Ngrok SSL Tunnel -> Admin Control Console",
-    techStack: ["Python3", "PHP", "Bash Scripts", "Ngrok Engine", "SSL Handlers"],
+    architecture: "Client Web Payload -> Async Receiver API -> HMAC-SHA256 Token Auth -> Webhook Engine (Discord/Telegram/Slack) -> Chart.js Analytics API -> Live Glassmorphic Dashboard",
+    techStack: ["Python 3", "PHP 8", "Glassmorphism CSS", "Chart.js", "HMAC-SHA256", "Webhooks API", "Cloudflare Tunnel", "Bash"],
     decisions: [
-      "Designed a modular PHP system that runs on standard public_html domains, bypassing local virtual machine requirements.",
-      "Integrated custom configuration modules allowing operators to reset panel credentials securely."
+      "Engineered a decoupled Python controller (cb.py) that manages local server lifecycle, system dependencies checks, and log file handlers independently from the web layer.",
+      "Implemented HMAC-SHA256 JWT security signatures on telemetry API endpoints to prevent tampered or unauthorized payload submissions.",
+      "Integrated multi-channel webhook dispatching (Telegram, Discord, Slack) into click-web/webhooks.php for instant security alert notifications.",
+      "Designed a dynamic plugin payload architecture scanning click-web/plugins/ dynamically, allowing instant deployment of new security modules without modifying core server logic."
     ],
-    challenges: "Modern browsers require active SSL certificates to authorize location or media access, blocking local testing.",
-    lessons: "Configuring automated Ngrok commands to spin up secure tunnels ensures that the panel operates correctly in lab tests.",
+    challenges: "Eliminating thread contention and race conditions during high-volume async telemetry logging while maintaining zero latency on live Chart.js dashboard polls.",
+    lessons: "Using non-blocking file streaming and structured JSON endpoints for metric APIs guarantees fluid UI updates even during high-throughput security capture sequences.",
     future: [
-      "Develop responsive security dashboards",
-      "Support telemetry analysis for Android Termux containers",
-      "Include detailed OWASP advisory write-ups for users"
+      "Implement WebSockets for sub-millisecond bidirectional log updates",
+      "Add Docker Compose single-command deployment pipeline",
+      "Integrate automated YARA rule matching on incoming payload buffers"
     ],
-    github: "https://github.com/ultrasecurity/Storm-Breaker",
-    image: "/projects/Click Breaker/Dashboard.png",
+    github: "https://github.com/omar230101276/Click-Breaker",
+    image: "/projects/Click Breaker/clickbreaker_preview.jpg",
     screenshots: [
-      "/projects/Click Breaker/Dashboard.png"
+      "/projects/Click Breaker/clickbreaker_preview.jpg",
+      "/projects/Click Breaker/Dashboard.png",
+      "/projects/Click Breaker/login.png",
+      "/projects/Click Breaker/modules.png",
+      "/projects/Click Breaker/banner.png"
     ],
     iconType: "security"
   },
