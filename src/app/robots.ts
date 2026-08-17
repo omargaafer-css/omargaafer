@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://omar-abdelghani.vercel.app/sitemap.xml",
+    sitemap: "https://omargaafer.vercel.app/sitemap.xml",
   };
 }
