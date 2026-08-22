@@ -35,7 +35,7 @@ EdgMon_V3.1/
 
 ### 1. Clone & Navigate to Project
 ```bash
-git clone https://github.com/omar230101276/EdgeMone_Server.git
+git clone https://github.com/omar-gaafer/EdgeMone_Server.git
 cd EdgeMone_Server
 ```
 

@@ -41,7 +41,7 @@ export default function Navigation() {
 
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="https://github.com/omar230101276"
+              href="https://github.com/omar-gaafer"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-text-secondary hover:text-white transition-colors duration-200"
@@ -101,7 +101,7 @@ export default function Navigation() {
           <div className="pt-4 pb-3 border-t border-border-custom px-5 flex flex-col gap-4">
             <div className="flex items-center space-x-6">
               <a
-                href="https://github.com/omar230101276"
+                href="https://github.com/omar-gaafer"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-white"

@@ -73,7 +73,7 @@ const projectsData: Record<string, ProjectDetail> = {
       "Expand compliant checking configurations for regional IEC / NEC standard codes",
       "Build real-time streaming calculation graphs"
     ],
-    github: "https://github.com/omar230101276/SpecSense-AI",
+    github: "https://github.com/omar-gaafer/SpecSense-AI",
     image: "/projects/SpecSense AI/specsense_ai_preview.jpg",
     screenshots: [
       "/projects/SpecSense AI/specsense_ai_preview.jpg",
@@ -116,7 +116,7 @@ const projectsData: Record<string, ProjectDetail> = {
       "Add Stripe/PayPal API payment gateway integration",
       "Support PDF and Excel analytical inventory reports export"
     ],
-    github: "https://github.com/omar230101276/FoodVerse",
+    github: "https://github.com/omar-gaafer/FoodVerse",
     image: "/projects/FoodVerse/foodverse_preview.jpg",
     screenshots: [
       "/projects/FoodVerse/foodverse_preview.jpg",
@@ -157,7 +157,7 @@ const projectsData: Record<string, ProjectDetail> = {
       "Add container orchestration logs to trace docker metrics",
       "Integrate automated firewall rule blocks for identified malicious IP inputs"
     ],
-    github: "https://github.com/omar230101276/EdgMon_V4.0",
+    github: "https://github.com/omar-gaafer/EdgMon_V4.0",
     image: "/projects/EdgMon V4.0/edgmon_v4_preview.jpg",
     screenshots: [
       "/projects/EdgMon V4.0/edgmon_v4_preview.jpg",
@@ -199,7 +199,7 @@ const projectsData: Record<string, ProjectDetail> = {
       "Configure RabbitMQ messaging bus to handle asynchronous order dispatches",
       "Implement PostgreSQL data layer for permanent order records"
     ],
-    github: "https://github.com/omar230101276/e-commerce-microservices",
+    github: "https://github.com/omar-gaafer/e-commerce-microservices",
     image: "/projects/E-Commerce App/ecommerce_preview.jpg",
     screenshots: [
       "/projects/E-Commerce App/ecommerce_preview.jpg",
@@ -237,7 +237,7 @@ const projectsData: Record<string, ProjectDetail> = {
       "Port the core compression logic to C++ to optimize execution times",
       "Add folder-level archive zipping support"
     ],
-    github: "https://github.com/omar230101276/Huffman_Compressor",
+    github: "https://github.com/omar-gaafer/Huffman_Compressor",
     image: "/projects/Huffman Compression/huffman_preview.jpg",
     screenshots: [
       "/projects/Huffman Compression/huffman_preview.jpg",
@@ -273,7 +273,7 @@ const projectsData: Record<string, ProjectDetail> = {
       "Build serverless functions to simulate live security authorization pins",
       "Add CSV ledger export options"
     ],
-    github: "https://github.com/omar230101276/Bank_Web_FrontEnd",
+    github: "https://github.com/omar-gaafer/Bank_Web_FrontEnd",
     image: "/projects/Web Bank/dashbord.png",
     screenshots: [
       "/projects/Web Bank/dashbord.png"
@@ -307,7 +307,7 @@ const projectsData: Record<string, ProjectDetail> = {
       "Integrate Stripe payment gateways",
       "Expose public API endpoints for client integrations"
     ],
-    github: "https://github.com/omar230101276/abady",
+    github: "https://github.com/omar-gaafer/abady",
     image: "/projects/Photogapher MS/Home page.png",
     screenshots: [
       "/projects/Photogapher MS/Home page.png",
@@ -355,7 +355,7 @@ const projectsData: Record<string, ProjectDetail> = {
       "Add Docker Compose single-command deployment pipeline",
       "Integrate automated YARA rule matching on incoming payload buffers"
     ],
-    github: "https://github.com/omar230101276/Click-Breaker",
+    github: "https://github.com/omar-gaafer/Click-Breaker",
     image: "/projects/Click Breaker/clickbreaker_preview.jpg",
     screenshots: [
       "/projects/Click Breaker/clickbreaker_preview.jpg",
@@ -394,7 +394,7 @@ const projectsData: Record<string, ProjectDetail> = {
       "Add email-based warning alerts for server status thresholds",
       "Support customized telemetry polling dashboards"
     ],
-    github: "https://github.com/omar230101276/Automated_Server_Monitorin-Linux-Windows-",
+    github: "https://github.com/omar-gaafer/Automated_Server_Monitorin-Linux-Windows-",
     image: "/projects/EdgMon V3.1/edgmon_v3_1_preview.jpg",
     screenshots: [
       "/projects/EdgMon V3.1/edgmon_v3_1_preview.jpg",
@@ -432,7 +432,7 @@ const projectsData: Record<string, ProjectDetail> = {
       "Deploy localized DHCP servers to automate endpoint IP assignment",
       "Integrate redundant gateway paths with HSRP or VRRP protocols"
     ],
-    github: "https://github.com/omar230101276/Enterprise-Network",
+    github: "https://github.com/omar-gaafer/Enterprise-Network",
     image: "/projects/Enterprise Network/enterprise_network_preview.jpg",
     screenshots: [
       "/projects/Enterprise Network/enterprise_network_preview.jpg",

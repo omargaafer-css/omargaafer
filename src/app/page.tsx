@@ -56,7 +56,7 @@ export default function Home() {
 
             <div className="flex items-center gap-6 pt-2">
               <a
-                href="https://github.com/omar230101276"
+                href="https://github.com/omar-gaafer"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-xs font-bold font-mono text-text-secondary hover:text-white transition-colors duration-200"
@@ -179,12 +179,12 @@ export default function Home() {
               <div className="flex items-center gap-3">
                 <Github size={18} className="text-primary-custom" />
                 <a
-                  href="https://github.com/omar230101276"
+                  href="https://github.com/omar-gaafer"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors duration-200"
                 >
-                  github.com/omar230101276
+                  github.com/omar-gaafer
                 </a>
               </div>
             </div>

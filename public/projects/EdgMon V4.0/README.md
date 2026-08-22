@@ -46,7 +46,7 @@ EdgMon_V4.0/
 
 ### 1. Clone & Navigate to Project
 ```bash
-git clone https://github.com/omar230101276/EdgMon_V4.0.git
+git clone https://github.com/omar-gaafer/EdgMon_V4.0.git
 cd EdgMon_V4.0
 ```
 

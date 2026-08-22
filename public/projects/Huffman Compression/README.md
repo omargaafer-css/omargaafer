@@ -41,7 +41,7 @@ Huffman_Compression_Project V3/
 
 ### 1. Clone & Navigate to Project
 ```bash
-git clone https://github.com/omar230101276/Huffman_Compressor.git
+git clone https://github.com/omar-gaafer/Huffman_Compressor.git
 cd Huffman_Compressor
 ```
 
