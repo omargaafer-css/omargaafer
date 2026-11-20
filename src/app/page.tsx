@@ -143,7 +143,7 @@ export default function Home() {
           <div className="max-w-3xl mb-12">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-2">Verified Certifications</h2>
             <p className="text-sm sm:text-base text-text-secondary">
-              Academic credentials, corporate internship sign-offs, and security program completions.
+              Academic credentials, global hackathons & challenges, corporate internships, and security program completions.
             </p>
           </div>
           <CertificationsGrid />

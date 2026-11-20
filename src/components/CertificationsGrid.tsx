@@ -23,6 +23,12 @@ export default function CertificationsGrid() {
       image: "/certifications/SpecSense AI Certificate.png",
     },
     {
+      title: "NASA Space Apps Challenge",
+      issuer: "NASA · Galactic Problem Solver",
+      date: "2026",
+      image: "/certifications/NASA Space Apps Challenge - Galactic Problem Solver.png",
+    },
+    {
       title: "Summer Internship 2025",
       issuer: "Elsewedy Electric PSP",
       date: "2025",
@@ -61,7 +67,7 @@ export default function CertificationsGrid() {
 
   return (
     <div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {certifications.map((cert) => (
           <div
             key={cert.title}
@@ -74,7 +80,7 @@ export default function CertificationsGrid() {
                 alt={cert.title}
                 fill
                 className="object-contain object-center group-hover:scale-[1.02] transition-transform duration-300"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <div className="p-4">
